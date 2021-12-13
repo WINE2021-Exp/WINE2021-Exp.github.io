@@ -1,4 +1,4 @@
-## Spillover Effects in Online field experiments: opportunities and challenges
+## Spillover Effects in Online field experiments: Opportunities and challenges
 
 This tutorial consists of six talks by researchers from a wide range of disciplines such as  computer science, economics, statistics, and operation research. Here we provide an overview of one main issue in online field experiments: spillover effects. We compile a reading list for researchers in both academia and industry who are interested in this topic.
 
