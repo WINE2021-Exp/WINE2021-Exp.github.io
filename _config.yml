@@ -24,3 +24,15 @@ scholar:
   details_link:   Details
 
   query: "@*"
+
+markdown: kramdown
+highlighter: rouge
+
+kramdown:
+  input:  GFM
+  hard_wrap: false
+  footnote_nr: 1
+  toc_levels: 1..6
+  entity_output: as_char
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  syntax_highlighter: rouge
