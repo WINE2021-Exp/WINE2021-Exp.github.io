@@ -235,8 +235,8 @@ weaker assumptions when we apply analysis:
 -   *Direct and indirect effects*. One assumption is that the treatment
     effect is a summation of the direct effect and the indirect effect.
     For example, the potential outcome of user $i$ can be written as
-    $y_i(z_i, w_i)$ where $z_i$ denotes the treatment assignment of the
-    user i and $w_i$ denotes if there is any other user who may "spill
+    $$y_i(z_i, w_i)$$ where $z_i$ denotes the treatment assignment of the
+    user i and $$w_i$$ denotes if there is any other user who may "spill
     over" their treatment to user $i$. Then we can estimate the direct
     effect and indirect effect separately. However, the drawback of this
     assumption is that we assume all indirect effects are homogeneous -
