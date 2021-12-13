@@ -415,8 +415,11 @@ experiments.
 
 ### Co-organizers and Speakers 
 
-- **David Holtz**, University of California, Berkeley
-- **Tracy Xiao Liu**, Tsinghua University
-- **Ozan Candogan** University of Chicago
+- [**David Holtz**](https://www.daveholtz.net/), University of California, Berkeley
+- [**Tracy Xiao Liu**](https://tracyxliu.com/), Tsinghua University
+- [**Ozan Candogan**](https://faculty.chicagobooth.edu/ozan-candogan) University of Chicago
 - **Meng Xu**, Snap Inc.
-- **Yuan Yuan**, Purdue University
+- [**Yuan Yuan**](https://www.yuan-yy.com/), Purdue University
+
+### References
+{% bibliography --cited %}
