@@ -1,6 +1,18 @@
 ## Spillover Effects in Online field experiments: opportunities and challenges
 
+This tutorial consists of six talks by researchers from a wide range of disciplines such as  computer science, economics, statistics, and operation research. Here we provide an overview of one main issue in online field experiments: spillover effects. We compile a reading list for researchers in both academia and industry who are interested in this topic.
+
+In this overview, we first introduce the spillover effects and discuss its impacts on field experiments. We next discuss how to addresses this issue by improving the experimental design and post-experiment analysis. 
+
 You can download the PDF version of this tutorial [here](WINE_exp_tutorial.pdf).
+
+### Co-organizers and Speakers 
+
+- [**David Holtz**](https://www.daveholtz.net/), University of California, Berkeley
+- [**Tracy Xiao Liu**](https://tracyxliu.com/), Tsinghua University
+- [**Ozan Candogan**](https://faculty.chicagobooth.edu/ozan-candogan) University of Chicago
+- **Meng Xu**, Snap Inc.
+- [**Yuan Yuan**](https://www.yuan-yy.com/), Purdue University
 
 ### An introduction to the spillover effects in field experiments 
 
@@ -412,14 +424,6 @@ social networks.\" In KDD(2015). 2227--2236.*
 From an industry perspective, this paper discusses challenges, best
 practices and pitfalls in evaluating results of online controlled
 experiments.
-
-### Co-organizers and Speakers 
-
-- [**David Holtz**](https://www.daveholtz.net/), University of California, Berkeley
-- [**Tracy Xiao Liu**](https://tracyxliu.com/), Tsinghua University
-- [**Ozan Candogan**](https://faculty.chicagobooth.edu/ozan-candogan) University of Chicago
-- **Meng Xu**, Snap Inc.
-- [**Yuan Yuan**](https://www.yuan-yy.com/), Purdue University
 
 ### References
 
