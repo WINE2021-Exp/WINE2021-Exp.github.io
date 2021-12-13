@@ -318,6 +318,99 @@ number of experiments performed by platforms, it is interesting to study
 how to collectively examine multiple experiments and obtain insights
 into experimental design and analysis.
 
+### Selected reading list for tutorial
+
+**\[Introduction to online field experiments\]**
+
+*Chen, Yan, and Joseph Konstan. \"Online field experiments: A selective
+survey of methods.\" Journal of the Economic Science Association 1.1
+(2015): 29-42.*
+
+This paper presents an overview of the design and analysis for online
+field experiments. It covers representative studies from both economics
+and computer science.
+
+**\[Empirical evidence for interference\]**
+
+*Muchnik, Lev, Sinan Aral, and Sean J. Taylor. \"Social influence bias:
+A randomized experiment.\" Science 341.6146 (2013): 647-651.*
+
+This paper represents the literature on identifying empirical evidence
+of interference (social influence) between units.
+
+**\[Cluster randomization\]**
+
+*Bharat K Chandar, Ali Hortaçsu, John A List, Ian Muir, and Jeffrey M
+Wooldridge. Design and analysis of cluster-randomized field experiments
+in panel data settings. National Bureau of Economic Research, 2019.*
+
+This paper examines best practices for estimating unit-level treatment
+effects in cluster-randomized field experiments and uses insights from
+their analysis to evaluate the effect of a nationwide tipping field
+experiment on Uber.
+
+**\[Graph cluster randomization\]**
+
+*Ugander, Johan, et al. \"Graph cluster randomization: Network exposure
+to multiple universes.\" Proceedings of the 19th ACM SIGKDD
+International Conference on Knowledge Discovery and Data Mining. 2013.*
+
+This paper proposed a novel approach to address spillover effects on
+large-scale social networks--graph cluster randomization. Here clusters
+are the graph clusters (communities) on networks
+
+*Pouget-Abadie, Jean, et al. \"Testing for arbitrary interference on
+experimentation platforms.\" Biometrika 106.4 (2019): 929-940.*
+
+This paper proposes an approach to compare graph cluster randomization
+and individual level assignment. Graph cluster randomization is shown to
+largely reduce bias in estimating treatment effects.
+
+**\[Bipartite experiments\]**
+
+*Holtz, David, et al. \"Reducing interference bias in online marketplace
+pricing experiments.\" Available at SSRN 3583836 (2020).*
+
+This paper aims to address the interference on two-sided markets, which
+is a good example for bipartite experiments.
+
+**\[Switchback randomization\]**
+
+*Bojinov, Iavor, David Simchi-Levi, and Jinglong Zhao. \"Design and
+analysis of switchback experiments.\" Available at SSRN 3684168 (2020).*
+
+This paper derives the optimal design of switchback experiments under
+the assumption of limited period of carryover effects.
+
+**\[Relaxing SUTVA\]**
+
+*Peter M Aronow and Cyrus Samii. \"Estimating average causal effects
+under general interference, with application to a social network
+experiment.\" Ann Appl Stat (2017).*
+
+This paper presents a randomization-based framework that relaxes SUTVA
+under general interference between units.
+
+**\[Incorporating machine learning\]**
+
+*Alex Chin. Regression adjustments for estimating the global treatment
+effect in experiments with interference. Journal of Causal Inference,
+7(2), 2019.*
+
+This paper proposes a novel approach that allows researchers to convert
+the problem of detecting interference into a feature engineering
+problem.
+
+**\[Applications\]**
+
+*Ya Xu, Nanyu Chen, Addrian Fernandez, Omar Sinno, and Anmol Bhasin.
+\"From infrastructure to culture: A/B testing challenges in large scale
+social networks.\" In KDD(2015). 2227--2236.*
+
+From an industry perspective, this paper discusses challenges, best
+practices and pitfalls in evaluating results of online controlled
+experiments.
+
 ### Co-organizers and Speakers 
 
 - **David Holtz**, University of California, Berkeley
