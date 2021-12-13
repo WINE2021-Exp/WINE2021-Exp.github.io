@@ -8,9 +8,9 @@ You can download the PDF version of this tutorial [here](WINE_exp_tutorial.pdf).
 
 ### Co-organizers and Speakers 
 
+- [**Ozan Candogan**](https://faculty.chicagobooth.edu/ozan-candogan) University of Chicago
 - [**David Holtz**](https://www.daveholtz.net/), University of California, Berkeley
 - [**Tracy Xiao Liu**](https://tracyxliu.com/), Tsinghua University
-- [**Ozan Candogan**](https://faculty.chicagobooth.edu/ozan-candogan) University of Chicago
 - **Meng Xu**, Snap Inc.
 - [**Yuan Yuan**](https://www.yuan-yy.com/), Purdue University
 
