@@ -422,3 +422,79 @@ experiments.
 - [**Yuan Yuan**](https://www.yuan-yy.com/), Purdue University
 
 ### References
+
+[1] Cassandra Handan-Nader, Daniel E Ho, and Becky Elias. Feasible policy evaluation by design: A randomized
+synthetic stepped-wedge trial of mandated disclosure in king county. Evaluation Review, 44(1):3–50, 2020.
+[2] Yan Chen and Joseph Konstan. Online field experiments: A selective survey of methods. Journal of the Economic
+Science Association, 1(1):29–42, 2015.
+[3] David Roxbee Cox. Planning of experiments. Wiley, 1958.
+[4] Guido W Imbens and Donald B Rubin. Causal inference in statistics, social, and biomedical sciences. Cambridge
+University Press, 2015.
+[5] Ya Xu, Nanyu Chen, Addrian Fernandez, Omar Sinno, and Anmol Bhasin. From infrastructure to culture:
+A/B testing challenges in large scale social networks. In Proceedings of the 21th ACM SIGKDD International
+Conference on Knowledge Discovery and Data Mining, pages 2227–2236, 2015.
+5
+Spillover Effects in Online field experiments: opportunities and challenges TECHNICAL REPORT
+[6] Jean Pouget-Abadie, Guillaume Saint-Jacques, Martin Saveski, Weitao Duan, S Ghosh, Y Xu, and Edoardo M
+Airoldi. Testing for arbitrary interference on experimentation platforms. Biometrika, 106(4):929–940, 2019.
+[7] Donald B Rubin. Estimating causal effects of treatments in randomized and nonrandomized studies. Journal of
+Educational Psychology, 66(5):688, 1974.
+[8] Peter M Aronow and Cyrus Samii. Estimating average causal effects under general interference, with application
+to a social network experiment. The Annals of Applied Statistics, 11(4):1912–1947, 2017.
+[9] Sinan Aral and Dylan Walker. Identifying influential and susceptible members of social networks. Science,
+337(6092):337–341, 2012.
+[10] Adam DI Kramer, Jamie E Guillory, and Jeffrey T Hancock. Experimental evidence of massive-scale emotional
+contagion through social networks. Proceedings of the National Academy of Sciences, 111(24):8788–8790, 2014.
+[11] David Weisburd and Cody W Telep. Hot spots policing: What we know and what we need to know. Journal of
+Contemporary Criminal Justice, 30(2):200–220, 2014.
+[12] Iavor Bojinov, David Simchi-Levi, and Jinglong Zhao. Design and analysis of switchback experiments. Available
+at SSRN 3684168, 2020.
+[13] Guillaume Basse and Avi Feller. Analyzing two-stage experiments in the presence of interference. Journal of the
+American Statistical Association, 113(521):41–55, 2018.
+[14] J Martin Bland. Cluster randomised trials in the medical literature: Two bibliometric surveys. BMC Medical
+Research Methodology, 4(1):1–6, 2004.
+[15] David M Murray, Sherri P Varnell, and Jonathan L Blitstein. Design and analysis of group-randomized trials: A
+review of recent methodological developments. American Journal of Public Health, 94(3):423–432, 2004.
+[16] Bharat K Chandar, Ali Hortaçsu, John A List, Ian Muir, and Jeffrey M Wooldridge. Design and analysis of
+cluster-randomized field experiments in panel data settings. National Bureau of Economic Research, 2019.
+[17] Santo Fortunato. Community detection in graphs. Physics Reports, 486(3-5):75–174, 2010.
+[18] Johan Ugander, Brian Karrer, Lars Backstrom, and Jon Kleinberg. Graph cluster randomization: Network
+exposure to multiple universes. In Proceedings of the 19th ACM SIGKDD International Conference on Knowledge
+Discovery and Data Mining, pages 329–337, 2013.
+[19] Dean Eckles, Brian Karrer, and Johan Ugander. Design and analysis of experiments in networks: Reducing bias
+from interference. Journal of Causal Inference, 5(1), 2017.
+[20] Johan Ugander and Hao Yin. Randomized graph cluster randomization. arXiv preprint arXiv:2009.02297, 2020.
+[21] Brian Karrer, Liang Shi, Monica Bhole, Matt Goldman, Tyrone Palmer, Charlie Gelman, Mikael Konutgan, and
+Feng Sun. Network experimentation at scale. In Proceedings of the 27th ACM SIGKDD Conference on Knowledge
+Discovery & Data Mining, pages 3106–3116, 2021.
+[22] Joel Nishimura and Johan Ugander. Restreaming graph partitioning: Simple versatile algorithms for advanced
+balancing. In Proceedings of the 19th ACM SIGKDD International Conference on Knowledge Discovery and
+Data Mining, pages 1106–1114, 2013.
+[23] Satu Elisa Schaeffer. Graph clustering. Computer Science Review, 1(1):27–64, 2007.
+[24] Preetam Nandy, Kinjal Basu, Shaunak Chatterjee, and Ye Tu. A/B testing in dense large-scale networks: Design
+and inference. Advances in Neural Information Processing Systems, 33, 2020.
+[25] Nick Doudchenko, Minzhengxiong Zhang, Evgeni Drynkin, Edoardo M Airoldi, Vahab Mirrokni, and Jean
+Pouget-Abadie. Causal inference with bipartite designs. Available at SSRN 3757188, 2020.
+[26] Jean Pouget-Abadie, Kevin Aydin, Warren Schudy, Kay Brodersen, and Vahab Mirrokni. Variance reduction in
+bipartite experiments through correlation clustering. Advances in Neural Information Processing Systems, 32,
+2019.
+[27] Corwin M Zigler and Georgia Papadogeorgou. Bipartite causal inference with interference. Statistical Science: A
+Review Journal of the Institute of Mathematical Statistics, 36(1):109, 2021.
+[28] David Holtz, Ruben Lobel, Inessa Liskovich, and Sinan Aral. Reducing interference bias in online marketplace
+pricing experiments. Available at SSRN 3583836, 2020.
+[29] Ramesh Johari, Hannah Li, Inessa Liskovich, and Gabriel Weintraub. Experimental design in two-sided platforms:
+An analysis of bias. arXiv preprint arXiv:2002.05670, 2020.
+[30] Iavor Bojinov and Neil Shephard. Time series experiments and causal estimands: Exact randomization tests and
+trading. Journal of the American Statistical Association, 114(528):1665–1682, 2019.
+6
+Spillover Effects in Online field experiments: opportunities and challenges TECHNICAL REPORT
+[31] David Kastelman and Raghav Ramesh. Switchback tests and randomized experimentation under network effects
+at doordash. https://medium.com/@DoorDash/switchback-tests-and-randomized-experimentation-under-networkeffects-at-doordash-f1d938ab7c2a, 2018.
+[32] Yaran Jin. Kuaishou causal inference and experimental design. https://mp.weixin.qq.com/s/svVl1eiVUH6rOYG3p2YiGg,
+2021.
+[33] Michael P Leung. Treatment and spillover effects under network interference. Review of Economics and Statistics,
+102(2):368–380, 2020.
+[34] Alex Chin. Regression adjustments for estimating the global treatment effect in experiments with interference.
+Journal of Causal Inference, 7(2), 2019.
+[35] Yuan Yuan, Kristen Altenburger, and Farshad Kooti. Causal network motifs: Identifying heterogeneous spillover
+effects in a/b tests. In Proceedings of the Web Conference 2021, pages 3359–3370, 2021.
