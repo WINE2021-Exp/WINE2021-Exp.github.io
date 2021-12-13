@@ -422,4 +422,3 @@ experiments.
 - [**Yuan Yuan**](https://www.yuan-yy.com/), Purdue University
 
 ### References
-{% bibliography --cited %}
