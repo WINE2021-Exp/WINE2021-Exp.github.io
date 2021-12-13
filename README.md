@@ -1,6 +1,6 @@
 ## Spillover Effects in Online field experiments: opportunities and challenges
 
-You can download the PDF version of this tutorial [here](WINE_exp_tutorial.pdf)
+You can download the PDF version of this tutorial [here](WINE_exp_tutorial.pdf).
 
 ### An introduction to the spillover effects in field experiments 
 
@@ -417,6 +417,6 @@ experiments.
 
 - **David Holtz**, University of California, Berkeley
 - **Tracy Xiao Liu**, Tsinghua University
-- **Candogan, Ozan** University of Chicago
+- **Ozan Candogan** University of Chicago
 - **Meng Xu**, Snap Inc.
 - **Yuan Yuan**, Purdue University
