@@ -16,14 +16,29 @@ WINE'2021 Website [link](https://hpi.de/wine2021/program/).
 - **Meng Xu**, Snap Inc.
 - [**Yuan Yuan**](https://www.yuan-yy.com/), Purdue University
 
+### Table of Contents
+- [An introduction to the spillover effects in field experiments](#an-introduction-to-the-spillover-effects-in-field-experiments)
+- [Mitigating spillover effects by experimental designs](#mitigating-spillover-effects-by-experimental-designs)
+    - [Cluster randomization](#cluster-randomization)
+    - [Graph cluster randomization](#graph-cluster-randomization)
+    - [Bipartite experiments](#bipartite-experiments)
+    - [Switchback randomization](#switchback-randomization)
+- [Mitigating spillover effects by post-experiment analysis](#mitigating-spillover-effects-by-post-experiment-analysis)
+    - [Bias-variance trade-off](#bias-variance-trade-off)  
+    - [Common assumptions used for considering spillover effects](#common-assumptions-used-for-considering-spillover-effects)
+    - [Using machine learning for complex spillover effects (interference)](#using-machine-learning-for-complex-spillover-effects-(interference))
+- [Future directions](#future-directions)
+- [Selected reading list for tutorial](#selected-reading-list-for-tutorial)
+- [References](#references)
+
 ### An introduction to the spillover effects in field experiments 
 
 Field experiments typically aim to quantify how an intervention (e.g., a
-new policy [1]) affects certain outcomes of all the
+new policy [[1]](#references)) affects certain outcomes of all the
 population. With the popularity of online communities and market places,
-there has been an outbreak of online field experiments [2].
+there has been an outbreak of online field experiments [[2]](#references).
 However, in many online and offline experiments, interference (or
-spillover effects) exists [3, 4]: a user's
+spillover effects) exists [[3, 4]](#references): a user's
 outcome may be affected by the treatment assignments of other subjects;
 for within-subject experiments, the previous treatment assignment the
 subject received may affect the outcome at a later stage.
@@ -54,12 +69,12 @@ everyone is treated versus non-treated.
 
 With the presence of the interference or spillover effect, the
 conventional way of randomizing samples may be problematic
-[5, 6]. Intuitively, the spillover effect means
+[[5, 6]](#references). Intuitively, the spillover effect means
 the outcome of an observation is not only affected by their own
 treatment assignment, but also by the treatment assignments of other
 observations. The existence of spillover effects violates the stable
 unit treatment value assumption (SUTVA). Formally, SUTVA is defined as
-[7]
+[[7]](#references)
 
 1.  The potential outcomes for any unit do not vary with treatments
     assigned to other units;
@@ -69,7 +84,7 @@ unit treatment value assumption (SUTVA). Formally, SUTVA is defined as
 
 The presence of spillover effects violates the first condition -- the
 potential outcome is affected by treatments assigned to other units
-[5, 8].
+[[5, 8]](#references).
 
 Here are more concrete examples of spillover effects:
 
@@ -77,16 +92,16 @@ Here are more concrete examples of spillover effects:
     that a person's behavior may influence others to do likewise
     [9]. Therefore, if one person is assigned a
     treatment, their family, friends, or acquaintances may also
-    indirectly receive this treatment [10].
+    indirectly receive this treatment [[10]](#references).
 
 -   *Displacement*. For example, increasing the exposure of an ad on a
     website may displace other ads with similar topics. Suppressing the
     crime in location A may increase the crime in location B
-    [11].
+    [[11]](#references).
 
 -   *Carryover effects*. In within-subject analysis, the treatment
     received in the last stage may affect the potential outcome in the
-    current stage [12]. For example, if a person
+    current stage [[12]](#references). For example, if a person
     receives a promotion before, receiving it once again would probably
     not have the same effect as the first time of receipt.
 
@@ -111,10 +126,10 @@ cluster level. In a school-level cluster randomization, all students in
 the same school will receive the same treatment assignments (deworm or
 not). By comparing students who are treated or not, we can measure the
 effect size with consideration of within-school spillover effects
-[13]. This experimental design is referred to as
+[[13]](#references). This experimental design is referred to as
 cluster randomization, which was first proposed in medical science but
 later rapidly adopted in many other fields
-[14, 15].
+[[14, 15]](#references).
 
 In the online setting, many platforms consider a city (county) as a
 "cluster." For example, Uber conducted an experiment to test the effect
@@ -122,7 +137,7 @@ of the introduction of the tipping mechanism. They chose 110 cities in
 the US and Canada as clusters and performed cluster level randomization.
 To improve the precision of estimation, they first match group cities in
 pairs according to their similarity and then assign one in a pair to
-treatment and the other to control [16].
+treatment and the other to control [[16]](#references).
 
 **Graph cluster randomization**
 
@@ -133,25 +148,25 @@ the outcome of their network neighbors. In social networks, it is
 challenging to split a whole network into completely separate clusters.
 A way to address this issue is by implementing community detection
 algorithms (in graph theory, graph clustering)
-[17]. That is, a social network is split into
+[[17]](#references). That is, a social network is split into
 relatively separate clusters. With this approach, most edges belong to
 the same cluster. We thus assign treatments such that all units in a
 cluster receive the same treatment. In this way, the spillover effects
 within each graph cluster (a.k.a. community) are taken into account.
-This method was first proposed by [18], and many improved
+This method was first proposed by [[18]](#references), and many improved
 versions have appeared
-[6, 19, 20, 21].
+[[6, 19, 20, 21]](#references).
 
 For example, Meta (formerly Facebook) reports that they actively employ
-graph cluster randomization on social networks [21]. A key
+graph cluster randomization on social networks [[21]](#references). A key
 challenge is the choice of graph cluster
-algorithms[22]. For example,
-[23] find that imbalanced graph clusters are typically
+algorithms[[22]](#references). For example,
+[[23]](#references) find that imbalanced graph clusters are typically
 superior in terms of the bias-variance tradeoff for graph cluster
 randomization.
 
 Meanwhile, Linkedin Research pointed out several challenges of graph
-cluster randomization [24]. They find that if the network is so
+cluster randomization [[24]](#references). They find that if the network is so
 dense that a community detection algorithm cannot give satisfactory
 partitioning, graph cluster level randomization may fail to consider too
 many spillover effects across communities.
@@ -165,14 +180,14 @@ deciding whether a randomization should be implemented on the consumer
 or supplier level. Moreover, a treatment can be assigned at the
 consumer-supplier pair level, which is referred to as bipartite
 experiments
-[25, 26, 27].
+[[25, 26, 27]](#references).
 
 There has been growing literature on designing and analyzing bipartite
 experiments, especially for two-sided markets. For example,
-[28] provides an approach to incorporate cluster
+[[28]](#references) provides an approach to incorporate cluster
 randomization in bipartite experiments. Specifically, they use
 observational data on Airbnb to create clusters of similar listing, and
-perform randomization on the cluster level. [29]
+perform randomization on the cluster level. [[29]](#references)
 discusses when the platform should perform randomization on the customer
 end or the supplier end.
 
@@ -184,9 +199,9 @@ experiments and randomize on the time level. For example, on a mobile
 app, the platform can randomly switch between two versions of the UI
 every hour or every day. Then the platform can compare user behavior
 between the hours (or days) with different versions displayed
-[12, 30].
+[[12, 30]](#references).
 
-For instance, DoorDash [31] uses this switchback experiment
+For instance, DoorDash [[31]](#references) uses this switchback experiment
 to test the effect of a pricing algorithm. However, large spillover
 effects (network interference), along with customer experience issues
 may occur. If two users who are close friends are assigned to different
@@ -199,7 +214,7 @@ every 30 minutes.
 
 In addition, Kuaishou, a popular video-sharing mobile app, has its
 two-sided market between users and hosts. However, as reported by
-[32], their platform has strong spillover effects between hosts
+[[32]](#references), their platform has strong spillover effects between hosts
 such that cluster randomization is not feasible. Therefore, they also
 use switchback experiments.
 
@@ -207,7 +222,7 @@ However, one challenge is the existence of the "carryover" effect.
 Previous experience of another version may affect the outcome in the
 current time period. One solution to this issue is by first implementing
 another experiment to detect the decay rate of carryover effects
-[12]. After this experiment, the researcher determines
+[[12]](#references). After this experiment, the researcher determines
 the time window for the switchback accordingly and implemented the
 switchback experiment.
 
@@ -233,13 +248,13 @@ is the variance. As the cluster is larger, the number of clusters
 decreases, and our statistical power by comparing the treatment and
 control also decreases. Therefore, choosing a proper size for clusters
 is crucial for the trade-off between bias and variance
-[18].
+[[18]](#references).
 
 Switchback experiments face the same trade-off. As the time window for
 each experimental period is wider, the bias is small as wider windows
 with potential carryover effects are taken into account. However, the
 variance increases with the number of available experimental periods
-[12].
+[[12]](#references).
 
 **Common assumptions used for considering spillover effects**
 
@@ -248,14 +263,14 @@ weaker assumptions when we apply analysis:
 
 -   *Direct and indirect effects*. One assumption is that the treatment
     effect is a summation of the direct effect and the indirect effect.
-    For example, the potential outcome of user $i$ can be written as
-    $$y_i(z_i, w_i)$$ where $z_i$ denotes the treatment assignment of the
-    user i and $$w_i$$ denotes if there is any other user who may "spill
-    over" their treatment to user $i$. Then we can estimate the direct
+    For example, the potential outcome of user ![1](http://latex.codecogs.com/png.latex?i) can be written as
+    ![2](http://latex.codecogs.com/png.latex?y_i(z_i, w_i)) where ![3](http://latex.codecogs.com/png.latex?z_i) denotes the treatment assignment of the
+    user ![4](http://latex.codecogs.com/png.latex?i) and ![5](http://latex.codecogs.com/png.latex?w_i) denotes if there is any other user who may "spill
+    over" their treatment to user ![6](http://latex.codecogs.com/png.latex?i). Then we can estimate the direct
     effect and indirect effect separately. However, the drawback of this
     assumption is that we assume all indirect effects are homogeneous -
     it is considered an indirect effect regardless of the number of
-    friends of the user i who get treated [8].
+    friends of the user ![7](http://latex.codecogs.com/png.latex?i) who get treated [[8]](#references).
 
 -   *Stable unit neighborhood treatment value assumption (SUNTVA)*. In
     the setting of social networks, we should define the network
@@ -268,20 +283,20 @@ weaker assumptions when we apply analysis:
     we need to define up to how many hops there is a spillover effect
     (typically it is just one hop). This is sometimes called Stable Unit
     Neighborhood Treatment Value Assignment
-    [18, 33].
+    [[18, 33]](#references).
 
 -   *Exposure conditions*. A further extension of the direct/indirect
     effects is the definition of exposure conditions. Practitioners
     should define a mapping where the input is the treatment assignments
     of a user and others who may spill over to the user and the output
     is a discrete number that labels the user's exposure condition. An
-    example is that we first define $2\times2=4$ exposure conditions,
+    example is that we first define ![8](http://latex.codecogs.com/png.latex?2\times2=4) exposure conditions,
     where the exposure condition is dependent on whether the user is
     treated and whether the number of treated neighbors in the social
-    network is greater than $k$. There are also more complex definitions
-    of exposure conditions [8, 18]. In social
+    network is greater than ![9](http://latex.codecogs.com/png.latex?k). There are also more complex definitions
+    of exposure conditions [[8, 18]](#references). In social
     network experiments, people typically need to first define SUNTVA
-    (i.e., only $k$-hop network neighbors would matter), and then define
+    (i.e., only ![10](http://latex.codecogs.com/png.latex?k)-hop network neighbors would matter), and then define
     exposure conditions.
 
 -   *Limited period of carryover effects*. In switchback experiments
@@ -292,7 +307,7 @@ weaker assumptions when we apply analysis:
     to negligibly small. There are studies that aim to identify the
     strength and decay rate of carryover effects and then assume the
     carryover effects only appear after a certain amount of time
-    [12].
+    [[12]](#references).
 
 **Using machine learning for complex spillover effects (interference)**
 
@@ -308,11 +323,11 @@ this specific experimental setting.
 
 There is growing literature in utilizing machine learning for addressing
 network interference, which proposes flexible model specification. Here
-are two examples. First, [34] proposes regression
+are two examples. First, [[34]](#references) proposes regression
 adjustment methods--they convert functions of the treatment assignment
 vector (the treatment of all subjects) into features in machine
 learning, and thus addressing spillover effects turns into standard
-feature engineering in machine learning. [35] proposes
+feature engineering in machine learning. [[35]](#references) proposes
 another approach for addressing spillover effects in networks---they
 first use network motifs to generate treatment assignment vectors, and
 then propose the tree-based algorithm that automatically generates
