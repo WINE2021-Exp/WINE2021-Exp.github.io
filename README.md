@@ -263,14 +263,14 @@ weaker assumptions when we apply analysis:
 
 -   *Direct and indirect effects*. One assumption is that the treatment
     effect is a summation of the direct effect and the indirect effect.
-    For example, the potential outcome of user $i$ can be written as
-    $$y_i(z_i, w_i)$$ where $z_i$ denotes the treatment assignment of the
-    user i and $$w_i$$ denotes if there is any other user who may "spill
-    over" their treatment to user $i$. Then we can estimate the direct
+    For example, the potential outcome of user ![1](http://latex.codecogs.com/png.latex?i) can be written as
+    ![2](http://latex.codecogs.com/png.latex?y_i(z_i, w_i)) where ![3](http://latex.codecogs.com/png.latex?z_i) denotes the treatment assignment of the
+    user ![4](http://latex.codecogs.com/png.latex?i) and ![5](http://latex.codecogs.com/png.latex?w_i) denotes if there is any other user who may "spill
+    over" their treatment to user ![6](http://latex.codecogs.com/png.latex?i). Then we can estimate the direct
     effect and indirect effect separately. However, the drawback of this
     assumption is that we assume all indirect effects are homogeneous -
     it is considered an indirect effect regardless of the number of
-    friends of the user i who get treated [[8]](#references).
+    friends of the user ![7](http://latex.codecogs.com/png.latex?i) who get treated [[8]](#references).
 
 -   *Stable unit neighborhood treatment value assumption (SUNTVA)*. In
     the setting of social networks, we should define the network
@@ -290,13 +290,13 @@ weaker assumptions when we apply analysis:
     should define a mapping where the input is the treatment assignments
     of a user and others who may spill over to the user and the output
     is a discrete number that labels the user's exposure condition. An
-    example is that we first define $2\times2=4$ exposure conditions,
+    example is that we first define ![8](http://latex.codecogs.com/png.latex?2\times2=4) exposure conditions,
     where the exposure condition is dependent on whether the user is
     treated and whether the number of treated neighbors in the social
-    network is greater than $k$. There are also more complex definitions
+    network is greater than ![9](http://latex.codecogs.com/png.latex?k). There are also more complex definitions
     of exposure conditions [[8, 18]](#references). In social
     network experiments, people typically need to first define SUNTVA
-    (i.e., only $k$-hop network neighbors would matter), and then define
+    (i.e., only ![10](http://latex.codecogs.com/png.latex?k)-hop network neighbors would matter), and then define
     exposure conditions.
 
 -   *Limited period of carryover effects*. In switchback experiments
