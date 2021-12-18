@@ -31,6 +31,8 @@ WINE'2021 Website [link](https://hpi.de/wine2021/program/).
 - [Selected reading list for tutorial](#selected-reading-list-for-tutorial)
 - [References](#references)
 
+**Authors for the tutorial**: [**Yuan Yuan**](https://www.yuan-yy.com/) and [**Tracy Xiao Liu**](https://tracyxliu.com/)
+
 ### An introduction to the spillover effects in field experiments 
 
 Field experiments typically aim to quantify how an intervention (e.g., a
