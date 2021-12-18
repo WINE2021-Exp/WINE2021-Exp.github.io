@@ -26,7 +26,7 @@ WINE'2021 Website [link](https://hpi.de/wine2021/program/).
 - [Mitigating spillover effects by post-experiment analysis](#mitigating-spillover-effects-by-post-experiment-analysis)
     - [Bias-variance trade-off](#bias-variance-trade-off)  
     - [Common assumptions used for considering spillover effects](#common-assumptions-used-for-considering-spillover-effects)
-    - [Using machine learning for complex spillover effects (interference)](#using-machine-learning-for-complex-spillover-effects-(interference))
+    - [Using machine learning for complex spillover effects (interference)](#using-machine-learning-for-complex-spillover-effects-interference)
 - [Future directions](#future-directions)
 - [Selected reading list for tutorial](#selected-reading-list-for-tutorial)
 - [References](#references)
@@ -116,7 +116,7 @@ the experimental design or improving analysis. Here we first discuss
 several types of experimental designs (i.e., the way of randomized
 treatment assignments).
 
-**Cluster randomization**
+#### Cluster randomization
 
 Often spillover effects exist within a larger unit. For example,
 considering all elementary school students as the population, the
@@ -139,7 +139,7 @@ To improve the precision of estimation, they first match group cities in
 pairs according to their similarity and then assign one in a pair to
 treatment and the other to control [[16]](#references).
 
-**Graph cluster randomization**
+#### Graph cluster randomization
 
 This is a special case of cluster randomization in social networks. As
 mentioned previously, social contagion is widespread in various
@@ -171,7 +171,7 @@ dense that a community detection algorithm cannot give satisfactory
 partitioning, graph cluster level randomization may fail to consider too
 many spillover effects across communities.
 
-**Bipartite experiments**
+#### Bipartite experiments
 
 Many platforms have two sided markets between consumers and suppliers.
 Examples include customers and deliverymen on food delivery apps or
@@ -191,7 +191,7 @@ perform randomization on the cluster level. [[29]](#references)
 discusses when the platform should perform randomization on the customer
 end or the supplier end.
 
-**Switchback randomization**
+#### Switchback randomization
 
 Sometimes the whole population cannot be satisfactorily split into many
 separate clusters. One solution is to implement within-subject
@@ -232,7 +232,7 @@ switchback experiment.
 After experiments are conducted, we can further mitigate the spillover
 effects by post-experiment analysis.
 
-**Bias-variance trade-off**
+#### Bias-variance trade-off
 
 In general, all solutions may involve a trade-off between bias and
 variance. Bias comes from the disregard of a great proportion of
@@ -256,21 +256,21 @@ with potential carryover effects are taken into account. However, the
 variance increases with the number of available experimental periods
 [[12]](#references).
 
-**Common assumptions used for considering spillover effects**
+#### Common assumptions used for considering spillover effects
 
 With spillover effects, SUTVA does not hold anymore. Therefore, we need
 weaker assumptions when we apply analysis:
 
 -   *Direct and indirect effects*. One assumption is that the treatment
     effect is a summation of the direct effect and the indirect effect.
-    For example, the potential outcome of user ![1](http://latex.codecogs.com/png.latex?i) can be written as
-    ![2](http://latex.codecogs.com/png.latex?y_i(z_i, w_i)) where ![3](http://latex.codecogs.com/png.latex?z_i) denotes the treatment assignment of the
-    user ![4](http://latex.codecogs.com/png.latex?i) and ![5](http://latex.codecogs.com/png.latex?w_i) denotes if there is any other user who may "spill
-    over" their treatment to user ![6](http://latex.codecogs.com/png.latex?i). Then we can estimate the direct
+    For example, the potential outcome of user ![1](http://latex.codecogs.com/svg.latex?i) can be written as
+    ![2](http://latex.codecogs.com/svg.latex?y_i(z_i,w_i)) where ![3](http://latex.codecogs.com/svg.latex?z_i) denotes the treatment assignment of the
+    user ![4](http://latex.codecogs.com/svg.latex?i) and ![5](http://latex.codecogs.com/svg.latex?w_i) denotes if there is any other user who may "spill
+    over" their treatment to user ![6](http://latex.codecogs.com/svg.latex?i). Then we can estimate the direct
     effect and indirect effect separately. However, the drawback of this
     assumption is that we assume all indirect effects are homogeneous -
     it is considered an indirect effect regardless of the number of
-    friends of the user ![7](http://latex.codecogs.com/png.latex?i) who get treated [[8]](#references).
+    friends of the user ![7](http://latex.codecogs.com/svg.latex?i) who get treated [[8]](#references).
 
 -   *Stable unit neighborhood treatment value assumption (SUNTVA)*. In
     the setting of social networks, we should define the network
@@ -290,13 +290,13 @@ weaker assumptions when we apply analysis:
     should define a mapping where the input is the treatment assignments
     of a user and others who may spill over to the user and the output
     is a discrete number that labels the user's exposure condition. An
-    example is that we first define ![8](http://latex.codecogs.com/png.latex?2\times2=4) exposure conditions,
+    example is that we first define ![8](http://latex.codecogs.com/svg.latex?2\times2=4) exposure conditions,
     where the exposure condition is dependent on whether the user is
     treated and whether the number of treated neighbors in the social
-    network is greater than ![9](http://latex.codecogs.com/png.latex?k). There are also more complex definitions
+    network is greater than ![9](http://latex.codecogs.com/svg.latex?k). There are also more complex definitions
     of exposure conditions [[8, 18]](#references). In social
     network experiments, people typically need to first define SUNTVA
-    (i.e., only ![10](http://latex.codecogs.com/png.latex?k)-hop network neighbors would matter), and then define
+    (i.e., only ![10](http://latex.codecogs.com/svg.latex?k)-hop network neighbors would matter), and then define
     exposure conditions.
 
 -   *Limited period of carryover effects*. In switchback experiments
@@ -309,7 +309,7 @@ weaker assumptions when we apply analysis:
     carryover effects only appear after a certain amount of time
     [[12]](#references).
 
-**Using machine learning for complex spillover effects (interference)**
+#### Using machine learning for complex spillover effects (interference)
 
 Two main challenges remain for using assumptions for analyzing
 experimental data. First, some assumptions may be simplistic. For
